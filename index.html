@@ -4,97 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portafolio de Daniel Rodrigálvarez Morente</title>
-
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <style>
     body {
       background-color: #f8f9fa;
       font-family: 'Segoe UI', sans-serif;
-      transition: background-color 0.3s, color 0.3s;
     }
-
-    .dark-mode {
-      background-color: #121212;
-      color: #ffffff;
-    }
-
     .section {
       padding: 60px 20px;
     }
-
     h2 {
       color: #2c3e50;
     }
-
     .card:hover {
       transform: scale(1.03);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
-
     .fade-in {
       animation: fadeIn 1.5s ease-in;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
     .typewriter h1 {
       overflow: hidden;
       white-space: nowrap;
       border-right: .15em solid orange;
       animation: typing 3s steps(30, end), blink .75s step-end infinite;
     }
-
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
     }
-
     @keyframes blink {
       from, to { border-color: transparent }
       50% { border-color: orange }
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .nav-link {
-      margin-right: 15px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navegación fija -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">DRM</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto">
-          <li><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-          <li><a class="nav-link" href="#proyectos">Proyectos</a></li>
-        </ul>
-      </div>
-      <button class="btn btn-dark" onclick="document.body.classList.toggle('dark-mode')">🌙 Tema</button>
-    </div>
-  </nav>
-
-  <!-- Encabezado -->
-  <header class="bg-dark text-white text-center py-5 typewriter mt-5">
-    <h1>Portafolio de Daniel Rodrigálvarez</h1>
+  <!-- Encabezado animado -->
+  <header class="bg-dark text-white text-center py-5 typewriter">
+    <h1>Portafolio de Daniel Rodrigálvarez Morente</h1>
     <p class="lead">Machine Learning · Deep Learning · Ciencia de Datos</p>
   </header>
 
-  <!-- Sobre mí -->
+  <!-- Sección "Sobre mí" -->
   <section class="section bg-white fade-in" id="sobre-mi">
     <div class="container">
       <h2>Sobre mí</h2>
@@ -105,4 +63,96 @@
     </div>
   </section>
 
-  <!--
+  <!-- Imagen de portada -->
+  <section class="position-relative">
+    <img src="https://picsum.photos/1200/400" class="img-fluid w-100" alt="Imagen de portada">
+    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h2 class="display-5 bg-dark bg-opacity-75 p-3 rounded">Explora mis proyectos</h2>
+    </div>
+  </section>
+
+  <!-- Proyectos en parrilla -->
+  <section class="section fade-in" id="proyectos">
+    <div class="container">
+      <h2 class="mb-4">Proyectos destacados</h2>
+      <div class="row">
+        <!-- Proyecto 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/id/1011/600/400" class="card-img-top" alt="Imagen CIFAR-10">
+            <div class="card-body">
+              <h5 class="card-title">Clasificador CIFAR-10</h5>
+              <p class="card-text">CNN entrenada para imágenes de 10 clases. Accuracy: 82%.</p>
+              <a href="#" class="btn btn-outline-primary">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/id/1018/600/400" class="card-img-top" alt="Sentimientos BERT">
+            <div class="card-body">
+              <h5 class="card-title">Análisis de Sentimientos</h5>
+              <p class="card-text">Modelo BERT aplicado a redes sociales. Precisión del 90%.</p>
+              <a href="#" class="btn btn-outline-primary">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/id/1040/600/400" class="card-img-top" alt="Detección de Fraude">
+            <div class="card-body">
+              <h5 class="card-title">Detección de Fraude</h5>
+              <p class="card-text">Random Forest sobre datos bancarios. Interpretación con SHAP.</p>
+              <a href="#" class="btn btn-outline-primary">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/id/1056/600/400" class="card-img-top" alt="Consumo energético">
+            <div class="card-body">
+              <h5 class="card-title">Regresión Energética</h5>
+              <p class="card-text">XGBoost para predecir consumo eléctrico en edificios públicos.</p>
+              <a href="#" class="btn btn-outline-primary">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/id/1062/600/400" class="card-img-top" alt="Clasificación de textos">
+            <div class="card-body">
+              <h5 class="card-title">Clasificación de Textos</h5>
+              <p class="card-text">TF-IDF + Naive Bayes para categorizar noticias.</p>
+              <a href="#" class="btn btn-outline-primary">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/id/1084/600/400" class="card-img-top" alt="Dashboard Streamlit">
+            <div class="card-body">
+              <h5 class="card-title">Dashboard Interactivo</h5>
+              <p class="card-text">App Streamlit sobre datos de salud pública en Cataluña.</p>
+              <a href="#" class="btn btn-outline-primary">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <small>© GNU General Public License v3.0</small>
+  </footer>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
