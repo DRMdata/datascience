@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Segmentación de Clientes - Proyecto ML</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    h2, h3 {
+      color: #2c3e50;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .typewriter h1 {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid orange;
+      animation: typing 3s steps(30, end), blink .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: orange }
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .img-example {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="bg-dark text-white text-center py-5 typewriter">
+    <h1>Segmentación Inteligente de Clientes</h1>
+    <p class="lead">Análisis exploratorio y modelado predictivo</p>
+    <nav class="mt-3">
+      <a href="index.html">Inicio</a>
+      <a href="sobremi.html">Sobre mí</a>
+      <a href="proyectos.html">Proyectos</a>
+    </nav>
+  </header>
+
+  <!-- Introducción -->
+  <section class="section fade-in" id="intro">
+    <div class="container">
+      <h2>📊 Introducción</h2>
+      <p>Este proyecto de segmentación de clientes forma parte de mi trabajo final del Máster en Ciencia de Datos. El objetivo era entender patrones de comportamiento en consumo, compras y consultas realizadas por clientes en una empresa.</p>
+      <p>El análisis se ha realizado utilizando Python, Jupyter Notebooks, y librerías como <strong>Pandas</strong>, <strong>Seaborn</strong> y <strong>Matplotlib</strong>. Además, se han desarrollado funciones propias para la exploración automática de dataframes.</p>
+    </div>
+  </section>
+
+  <!-- Carga de Datos -->
+  <section class="section bg-white fade-in" id="datos">
+    <div class="container">
+      <h2>🔍 Carga de Datos</h2>
+      <p>Se utilizaron múltiples fuentes: datos de clientes, ventas, consultas, departamentos y sectores. La carga se hizo desde archivos `.txt` separados por `|` usando `pd.read_csv()`.</p>
+      <p>Se detectaron valores nulos importantes en campos como <em>departamento</em>, <em>tamaño</em> y <em>antigüedad</em>, principalmente asociados a personas físicas, lo que se consideró válido por contexto.</p>
+    </div>
+  </section>
+
+  <!-- Visualización de datos -->
+  <section class="section fade-in" id="graficos">
+    <div class="container">
+      <h2>📈 Revisión Gráfica</h2>
+      <p>Se realizaron histogramas de variables numéricas, matrices de correlación y revisión de outliers. Algunas observaciones:</p>
+      <ul>
+        <li>La variable <code>DIASCLIENTE</code> mostró una cantidad significativa de valores extremos.</li>
+        <li>Se observó una correlación casi perfecta entre <strong>CONSULTAS</strong> y <strong>CONSUMOSTOTAL</strong>.</li>
+        <li>La variable <strong>FORMAJURIDICA</strong> tiene gran impacto en el comportamiento de ventas.</li>
+      </ul>
+      <img src="https://picsum.photos/seed/graficos/900/400" alt="Ejemplo gráfico exploratorio" class="img-example">
+    </div>
+  </section>
+
+  <!-- Insights y transformación -->
+  <section class="section bg-white fade-in" id="transformaciones">
+    <div class="container">
+      <h2>🧠 Transformaciones y Variables Nuevas</h2>
+      <p>Se crearon más de 50 variables derivadas, entre ellas:</p>
+      <ul>
+        <li><code>DIAS_REGISTRO_CLIENTE</code>: diferencia entre fecha de registro y primera compra.</li>
+        <li><code>RECENCIA_VENTA</code>: días desde la última compra.</li>
+        <li><code>VENTAS_PERIODO</code> y <code>CONSULTAS_PERIODO</code>: actividad en los últimos 12 meses.</li>
+        <li><code>IMPORTE_PROMEDIO</code> y <code>FRECUENCIA_VENTA</code>: métricas clave del comportamiento de compra.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Acceso al notebook -->
+  <section class="section fade-in text-center">
+    <div class="container">
+      <h2>📘 Accede al notebook completo</h2>
+      <p>Si quieres ver el código y el análisis paso a paso, accede al notebook original:</p>
+      <a href="https://nbviewer.org/github/drmdata/datascience/blob/main/proyectos/ejemplo.ipynb" target="_blank" class="btn btn-outline-secondary">Abrir Notebook en nbviewer</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <small>© Daniel Rodrigálvarez · Licencia GNU GPL v3.0</small>
+  </footer>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
