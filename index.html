@@ -2,57 +2,114 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Daniel Rodrigálvarez - Ciencia de Datos</title>
-  <link rel="stylesheet" href="estilos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio - Ciencia de Datos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .typewriter h1 {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid orange;
+      animation: typing 3s steps(30, end), blink .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: orange }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Daniel Rodrigálvarez Morente</h1>
-    <nav>
-      <ul>
-        <li><a href="sobremi.html">Sobre mí</a></li>
-        <li><a href="opinion.html">Opinión</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-      </ul>
-    </nav>
+
+  <!-- Encabezado -->
+  <header class="bg-dark text-white text-center py-5 typewriter">
+    <h1>Portafolio - Ciencia de Datos</h1>
+    <p class="lead">Machine Learning · Deep Learning · Python · Investigación</p>
   </header>
 
-  <section>
-    <h2>Proyectos recientes</h2>
-    <div class="card">
-      <h3>Clasificador CIFAR-10</h3>
-      <p>CNN entrenada con 82% de precisión para imágenes en 10 clases.</p>
-      <a href="#">Ver en GitHub</a>
-    </div>
-    <div class="card">
-      <h3>Análisis de Sentimientos</h3>
-      <p>Modelo BERT aplicado a redes sociales. Precisión: 90%.</p>
-      <a href="#">Ver en GitHub</a>
-    </div>
-    <div class="card">
-      <h3>Detección de Fraude</h3>
-      <p>Random Forest sobre datos bancarios, explicaciones con SHAP.</p>
-      <a href="#">Ver en GitHub</a>
+  <!-- Sobre mí -->
+  <section class="section bg-white fade-in" id="sobre-mi">
+    <div class="container">
+      <h2>Sobre mí</h2>
+      <p>Soy Daniel, investigador en ciencia de datos y modelado predictivo. Apasionado por el aprendizaje profundo y la estadística aplicada.</p>
+      <p>📧 <a href="mailto:drm@example.com">drm@example.com</a> · 
+         🔗 <a href="https://github.com/drmdata" target="_blank">GitHub</a> · 
+         💼 <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a></p>
     </div>
   </section>
 
-  <section>
-    <h2>Artículos de opinión</h2>
-    <div class="card">
-      <h3>¿Qué viene después del Deep Learning?</h3>
-      <p>Reflexión sobre el impacto del aprendizaje profundo en el futuro...</p>
-      <a href="opinion.html">Leer más</a>
-    </div>
-    <div class="card">
-      <h3>Modelos interpretables vs complejidad</h3>
-      <p>¿Hasta qué punto debe un modelo ser entendible?</p>
-      <a href="opinion.html">Leer más</a>
-    </div>
-    <div class="card">
-      <h3>Aplicaciones éticas en IA</h3>
-      <p>Responsabilidad al implementar algoritmos en contextos reales.</p>
-      <a href="opinion.html">Leer más</a>
+  <!-- Proyectos -->
+  <section class="section fade-in" id="proyectos">
+    <div class="container">
+      <h2 class="mb-4">Proyectos destacados</h2>
+      <div class="row">
+        <!-- Ejemplo de proyecto -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/id/1005/600/400" class="card-img-top" alt="Imagen proyecto">
+            <div class="card-body">
+              <h5 class="card-title">Predicción de precios</h5>
+              <p class="card-text">Modelo de regresión sobre datos inmobiliarios en España.</p>
+              <a href="#" class="btn btn-outline-primary">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Repite cards según los proyectos -->
+      </div>
     </div>
   </section>
+
+  <!-- Artículos -->
+  <section class="section bg-white fade-in" id="articulos">
+    <div class="container">
+      <h2 class="mb-4">Artículos de opinión</h2>
+      <div class="row">
+        <!-- Card artículo -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">¿El futuro es el aprendizaje profundo?</h5>
+              <p class="card-text">Reflexión sobre el papel del Deep Learning en la investigación científica.</p>
+              <a href="#" class="btn btn-outline-secondary">Leer más</a>
+            </div>
+          </div>
+        </div>
+        <!-- Añade más artículos como cards si lo deseas -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <small>© Daniel Rodrigálvarez · Licencia GNU GPL v3.0</small>
+  </footer>
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
