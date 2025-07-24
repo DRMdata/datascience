@@ -1,29 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Sobre mí</title>
-  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre mí - Daniel Rodrigálvarez</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .typewriter h1 {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid orange;
+      animation: typing 3s steps(30, end), blink .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: orange }
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header>
+
+  <!-- Encabezado -->
+  <header class="bg-dark text-white text-center py-5 typewriter">
     <h1>Sobre mí</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="opinion.html">Opinión</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-      </ul>
+    <p class="lead">Conoce mi recorrido y motivaciones</p>
+    <nav class="mt-3">
+      <a href="index.html">Inicio</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="opinion.html">Opinión</a>
     </nav>
   </header>
 
-  <section>
-    <p>Datos, análisis, Machine Learning, Deep Learning, ... </p>
-    <ul>
+  <!-- Sección sobre mí -->
+  <section class="section fade-in" id="perfil">
+    <div class="container">
+      <h2>Perfil profesional</h2>
+      <p>Soy Daniel Rodrigálvarez Morente, investigador y divulgador en el campo de la ciencia de datos. Me dedico a aplicar modelos de machine learning y deep learning a problemas reales, buscando siempre un balance entre precisión e interpretación.</p>
+      <p>Además, me interesa el papel ético de la inteligencia artificial y la comunicación científica.</p></p>
       <a href="mailto:danyrm19575@gmail.com">danyrm19575@gmail.com</a><p>  
       <a href="https://github.com/DRMdata" target="_blank">GitHub</a><p>
-      <a href="https://www.linkedin.com/in/daniel-rodrig%C3%A1lvarez-morente-b49874274/" target="_blank">LinkedIn</a></p>
-    </ul>
+      <a href="https://www.linkedin.com/in/daniel-rodrigálvarez-morente-b49874274/" target="_blank">LinkedIn</a></p>
+    </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <small>© Daniel Rodrigálvarez · Licencia GNU GPL v3.0</small>
+  </footer>
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
